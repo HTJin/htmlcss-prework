@@ -1,0 +1,208 @@
+.display {
+  background: linear-gradient(90deg, #032e3e, #19646a, #032e3e);
+  background-size: 400% 400%;
+  font-family: "Raleway", sans-serif;
+  animation: display-bg 20s ease-in-out infinite;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes display-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navigation, .back {
+  text-decoration: none;
+  color: inherit;
+}
+.navigation:hover {
+  transform: scale(1.5);
+  transition: .5s ease;
+  text-shadow: 0 0 25px hsl(400, 100%, 100%);
+}
+
+.face {
+  position: relative;
+  height: 40%;
+  display: flex;
+  margin-left: 10rem;
+}
+.side-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 4rem;
+  color: hsl(400, 100%, 70%);
+  animation: side-section 3s linear infinite;
+}
+@keyframes side-section {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 25px hsl(400, 100%, 70%);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+.bday, .stare {
+  border-radius: 50%;
+  height: 100%;
+  animation: glow 5s linear infinite;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 15px hsl(180, 100%, 70%);
+  }
+  50% {
+    box-shadow: 0 0 50px hsl(150, 100%, 60%);
+  }
+  100% {
+    box-shadow: 0 0 15px hsl(180, 100%, 70%);
+  }
+}
+.stare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 1s ease;
+}
+.face:hover .stare {
+  opacity: 1;
+}
+
+h1 {
+  color: hsl(150, 100%, 60%);
+  animation: neon 3s linear infinite;
+}
+h2 {
+  color: hsl(180, 100%, 70%);
+  transform: translateX(-3rem);
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 25px hsl(150, 100%, 60%);
+  }
+  50% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 0 25px hsl(150, 100%, 60%);
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  width: 12rem;
+}
+.icon {
+  position: relative;
+}
+.icon-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: .1s linear;
+}
+.icon:hover .icon-hover {
+  opacity: 1;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  color: #fff;
+  text-align: center;
+  padding: 7px;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 140%;
+  left: 20%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip .gmail {
+  background-color: #CE493B;
+}
+.tooltip .github {
+  background-color: #A66CFF;
+}
+.tooltip .linkedin {
+  background-color: #0077B5;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+}
+.tooltip .gmail::after {
+  border-color: transparent transparent #CE493B transparent;
+}
+.tooltip .github::after {
+  border-color: transparent transparent #A66CFF transparent;
+}
+.tooltip .linkedin::after {
+  border-color: transparent transparent #0077B5 transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.content {
+  margin-left: 20rem;
+  margin-right: 20rem;
+  width: 50dvw;
+  color: #edf5e1;
+}
+
+.end:hover {
+  text-shadow: 0 0 25px hsl(180, 100%, 70%);
+  transform: translateX(-.5rem);
+  transition: .5s ease;
+}
+
+.back-container {
+  display: flex;
+  width: 10dvw;
+  justify-content: space-between;
+  align-items: baseline;
+}
